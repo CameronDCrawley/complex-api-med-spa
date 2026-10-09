@@ -71,10 +71,6 @@ document.querySelector('#emojiBtn').addEventListener('click',getBooksWithEmoji)
     //selects words keywords from the array
     let word = slug.length > 1 ? slug[1] : slug[0];
 
-    let dontUse = ['face','with','and', 'of', 'a', 'the']
-
-    dontUse.filter( words => !dontUse.includes(words))
-
     //takes the last word from the unicode name 
     if(!word || !isNaN(word) || word.length < 2){
       word = data[0].unicodeName ? data[0].unicodeName.split(' ').pop(): 'book'
